@@ -17,6 +17,7 @@ const Deyan: React.FC<SkillProps> = (props) => {
       			'typescript',
 		      	'sass',
 		      	'nodejs',
+			'express',
 		      	'mysql',
 	    	],  
 	    	work = {
