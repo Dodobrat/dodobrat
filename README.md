@@ -1,4 +1,8 @@
-# Hi there, I'm Deyan 👋
+# I'm Dodo, Dodobrat <img src="https://media.giphy.com/media/TdvgwNdoIY9Ncl2D4d/giphy.gif" height="50">
+
+Giving Google a run for their money since 2017
+
+<img src="https://media.giphy.com/media/eoxomXXVL2S0E/source.gif" height="250">
 
 ```tsx
 
