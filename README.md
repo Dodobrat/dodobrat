@@ -7,14 +7,11 @@ Giving Google a run for their money since 2017
 ```tsx
 
 import React from "react";
-import cn from "classnames";
-import ProfileCard from '../Cards/ProfileCard';
 
 import { SkillProps } from "./SkillProps.types";
 
 const Deyan: React.FC<SkillProps> = (props) => {
 	const { 
-    		classNames, 
     		skills = [
       			'react',
       			'typescript',
@@ -31,17 +28,17 @@ const Deyan: React.FC<SkillProps> = (props) => {
   	} = props;
   
 	return (
-		<ProfileCard {...rest}>
+		<div {...rest}>
       			<h1>Company: {work?.company}</h1>
       			<h4>Position: {work?.position}</h4>
 			
       			<hr/>
 			
       			{skills.map(skill => (
-        			<Badge>{skill}</Badge>
+        			<span>{skill}</span>
       			)}
 			{children}
-		</ProfileCard>
+		</div>
 	);
 };
 
