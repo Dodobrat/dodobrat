@@ -10,30 +10,32 @@ import { SkillProps } from "./SkillProps.types";
 
 const Deyan: React.FC<SkillProps> = (props) => {
 	const { 
-    classNames, 
-    skills = [
-      'react',
-      'typescript',
-      'sass',
-      'nodejs',
-      'mysql',
-    ],  
-    work = {
-      company: 'Veniway',
-      position: 'Front-end Developer'
-    },
-    children, 
-    ...rest
-  } = props;
+    		classNames, 
+    		skills = [
+      			'react',
+      			'typescript',
+		      	'sass',
+		      	'nodejs',
+		      	'mysql',
+	    	],  
+	    	work = {
+	      		company: 'Veniway',
+	      		position: 'Front-end Developer'
+	    	},
+	    	children, 
+	    	...rest
+  	} = props;
   
 	return (
 		<ProfileCard {...rest}>
-      <h1>Company: {work?.company}</h1>
-      <h4>Position: {work?.position}</h4>
-      <hr/>
-      {skills.map(skill => (
-        <Badge>{skill}</Badge>
-      )}
+      			<h1>Company: {work?.company}</h1>
+      			<h4>Position: {work?.position}</h4>
+			
+      			<hr/>
+			
+      			{skills.map(skill => (
+        			<Badge>{skill}</Badge>
+      			)}
 			{children}
 		</ProfileCard>
 	);
