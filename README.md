@@ -32,11 +32,10 @@ const Deyan: React.FC<SkillProps> = (props) => {
       			<h1>Company: {work?.company}</h1>
       			<h4>Position: {work?.position}</h4>
 			
-      			<hr/>
+			<div className='skills'>
+      				{skills.map(skill => <span>{skill}</span>}
+			</div>
 			
-      			{skills.map(skill => (
-        			<span>{skill}</span>
-      			)}
 			{children}
 		</div>
 	);
