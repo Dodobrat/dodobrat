@@ -8,7 +8,17 @@ Giving Google a run for their money since 2017
 
 import React from "react";
 
-import { SkillProps } from "./SkillProps.types";
+type WorkplaceType = {
+	company: string;
+	position: string;
+}
+
+interface SkillProps {
+	skills?: string[];
+	work?: WorkplaceType;
+	location?: string;
+	children?: React.ReactNode;
+}
 
 const Deyan: React.FC<SkillProps> = (props) => {
 	const { 
@@ -24,12 +34,17 @@ const Deyan: React.FC<SkillProps> = (props) => {
 	      		company: 'Veniway',
 	      		position: 'Front-end Developer'
 	    	},
+		location = 'Sofia, Bulgaria',
 	    	children, 
 	    	...rest
   	} = props;
   
 	return (
 		<div {...rest}>
+			<span>{location}</span>
+			
+			<hr/>
+			
       			<h1>Company: {work?.company}</h1>
       			<h4>Position: {work?.position}</h4>
 			
