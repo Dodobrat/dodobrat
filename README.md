@@ -8,17 +8,7 @@ Giving Google a run for their money since 2017
 
 import React from "react";
 
-type WorkplaceType = {
-	company: string;
-	position: string;
-}
-
-interface SkillProps {
-	skills?: string[];
-	work?: WorkplaceType;
-	location?: string;
-	children?: React.ReactNode;
-}
+import {SkillProps} from "./Deyan.types"
 
 const Deyan: React.FC<SkillProps> = (props) => {
 	const { 
@@ -41,7 +31,7 @@ const Deyan: React.FC<SkillProps> = (props) => {
   
 	return (
 		<div {...rest}>
-			<span>{location}</span>
+			<span>Location: {location}</span>
 			
 			<hr/>
 			
