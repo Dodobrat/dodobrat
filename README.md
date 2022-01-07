@@ -25,7 +25,7 @@ function Deyan(props){
 			company: "Dreamix",
 			position: "React Developer"
 		},
-		location: {
+		location = {
 			city: "Sofia",
 			country: "Bulgaria"
 		}
@@ -36,13 +36,25 @@ function Deyan(props){
 			<Avatar />
 			<div className="grid gap-2">
 				<h1 className="text-lg space-x-2">
-					<span>{details.fullName}</span> 
-					<span className="text-sm text-gray">{details.age}</span>
+					<span>
+						{details.fullName}
+					</span> 
+					<span className="text-sm text-gray">
+						{details.age}
+					</span>
 				</h1>
-				<h4 className="text-md">{details.education}</h4>
+				<h4 className="text-md">
+					{details.education}
+				</h4>
+				
 				<hr/>
-				<p>Work: {work.company} as {work.position} ({`${location.city}, ${location.country}`})</p>
+				
+				<p>
+					Work: {work.company} as {work.position} ({`${location.city}, ${location.country}`})
+				</p>
+				
 				<hr/>
+				
 				<ul className="flex flex-wrap items-center gap-2">
 					{skills.map((skill) => (
 						<li key={skill} className="p-2 rounded bg-indigo-500 text-white cursor-pointer select-none">
