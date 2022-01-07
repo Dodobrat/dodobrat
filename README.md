@@ -5,66 +5,57 @@ Giving Google a run for their money since 2017
 <img src="https://media.giphy.com/media/eoxomXXVL2S0E/source.gif" height="250">
 
 ```js
+import { Avatar } from "components"
 
 function Deyan(props){
-	const {
-		details = {
-			fullName: "Deyan Bozhilov",
-			age: "24",
-			education: "Coventry University"
-		},
-		skills = [
-			"react", 
-			"typescript", 
-			"sass", 
-			"nodejs", 
-			"express", 
-			"mysql" 
-		],
-		work = {
-			company: "Dreamix",
-			position: "React Developer"
-		},
-		location = {
-			city: "Sofia",
-			country: "Bulgaria"
-		}
-	} = props;
+  const {
+    details = {
+      fullName: "Deyan Bozhilov",
+      age: "24",
+      education: "Coventry University"
+    },
+    skills = [
+      "react", 
+      "typescript", 
+      "sass", 
+      "nodejs", 
+      "express", 
+      "mysql" 
+    ],
+    work = {
+      company: "Dreamix",
+      position: "React Developer"
+    },
+    location = {
+      city: "Sofia",
+      country: "Bulgaria"
+    }
+  } = props;
 
-    return (
-		<article className="flex bg-white dark:bg-black text-black dark:text-white rounded p-4 md:p-2 shadow-sm">
-			<Avatar />
-			<div className="grid gap-2">
-				<h1 className="text-lg space-x-2">
-					<span>
-						{details.fullName}
-					</span> 
-					<span className="text-sm text-gray">
-						{details.age}
-					</span>
-				</h1>
-				<h4 className="text-md">
-					{details.education}
-				</h4>
+  return (
+    <article className="flex bg-white dark:bg-black text-black dark:text-white rounded p-4 md:p-2 shadow-sm">
+      <Avatar />
+      <div className="grid gap-2">
+        <h1 className="text-lg space-x-2">
+          <span>{details.fullName}</span> 
+          <span className="text-sm text-gray">{details.age}</span>
+        </h1>
+        <h4 className="text-md">{details.education}</h4>
 				
-				<hr/>
+        <hr/>
+        <p>Work: {work.company} as {work.position} ({`${location.city}, ${location.country}`})</p>
+        <hr/>
 				
-				<p>
-					Work: {work.company} as {work.position} ({`${location.city}, ${location.country}`})
-				</p>
-				
-				<hr/>
-				
-				<ul className="flex flex-wrap items-center gap-2">
-					{skills.map((skill) => (
-						<li key={skill} className="p-2 rounded bg-indigo-500 text-white cursor-pointer select-none">
-							{skill}
-						</li>
-					))}
-				</ul>
-			</div>
-		</article>
-	);
+        <ul className="flex flex-wrap items-center gap-2">
+          {skills.map((skill) => (
+            <li key={skill} className="p-2 rounded bg-indigo-500 text-white cursor-pointer select-none">
+              {skill}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </article>
+  );
 };
 
 export default Deyan;
