@@ -1,6 +1,6 @@
 # I'm Dodo, Dodobrat <img src="https://media.giphy.com/media/TdvgwNdoIY9Ncl2D4d/giphy.gif" height="50">
 
-Giving Google a run for their money since 2017
+Giving Google and Meta a run for their money since 2017
 
 <img src="https://media.giphy.com/media/eoxomXXVL2S0E/source.gif" height="250">
 
@@ -63,3 +63,7 @@ function Deyan(props){
 export default Deyan;
 
 ```
+
+<img src="https://media.giphy.com/media/vHkpKvCemFUCljdi7b/giphy.gif" height="200"/>
+
+>line 69
