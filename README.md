@@ -5,7 +5,6 @@ Giving Google a run for their money since 2017
 <img src="https://media.giphy.com/media/eoxomXXVL2S0E/source.gif" height="250">
 
 ```js
-import { Avatar } from "components"
 
 function Deyan(props){
   const {
@@ -31,6 +30,8 @@ function Deyan(props){
       country: "Bulgaria"
     }
   } = props;
+  
+  const {t} = useTranslation();
 
   return (
     <article className="flex bg-white dark:bg-black text-black dark:text-white rounded p-4 md:p-2 shadow-sm">
@@ -43,8 +44,8 @@ function Deyan(props){
         <h4 className="text-md">{details.education}</h4>
 	
         <div className="px-4 py-2 border">
-          <p>Work: {work.company} as {work.position}</p> 
-          <p>Location: {location.city}, {location.country}</p>
+          <p>{t('common.work')}: {work.company} as {work.position}</p> 
+          <p>{t('common.location')}: {location.city}, {location.country}</p>
 	</div>
 	
         <ul className="flex flex-wrap items-center gap-2">
