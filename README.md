@@ -41,11 +41,12 @@ function Deyan(props){
           <span className="text-sm text-gray">{details.age}</span>
         </h1>
         <h4 className="text-md">{details.education}</h4>
-				
-        <hr/>
-        <p>Work: {work.company} as {work.position} ({`${location.city}, ${location.country}`})</p>
-        <hr/>
-				
+	
+        <div className="px-4 py-2 border">
+          <p>Work: {work.company} as {work.position}</p> 
+          <p>Location: {location.city}, {location.country}</p>
+	</div>
+	
         <ul className="flex flex-wrap items-center gap-2">
           {skills.map((skill) => (
             <li key={skill} className="p-2 rounded bg-indigo-500 text-white cursor-pointer select-none">
