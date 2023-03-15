@@ -10,21 +10,21 @@ function Deyan(props){
   const {
     details = {
       fullName: "Deyan Bozhilov",
-      age: "24",
+      age: "25",
       education: "Coventry University"
     },
     skills = [
-      "react", 
-      "typescript", 
-      "sass", 
-      "nodejs", 
-      "express", 
-      "mysql" 
+      "react",
+      "typescript",  
+      "nodejs" 
     ],
     work = {
       company: "Dreamix",
       position: "React Developer"
     },
+    goals = [
+      "build something cool"
+    ], 
     location = {
       city: "Sofia",
       country: "Bulgaria"
