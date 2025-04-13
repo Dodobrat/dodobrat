@@ -10,7 +10,7 @@ function Deyan(props){
   const {
     details = {
       fullName: "Deyan Bozhilov",
-      age: "25",
+      birthDate: "15 Jan 1998",
       education: "Coventry University"
     },
     skills = [
@@ -20,7 +20,7 @@ function Deyan(props){
     ],
     work = {
       company: "Dreamix",
-      position: "React Developer"
+      position: "Software Engineer"
     },
     goals = [
       "build something cool"
@@ -39,7 +39,7 @@ function Deyan(props){
       <div className="grid gap-2">
         <h1 className="text-lg space-x-2">
           <span>{details.fullName}</span> 
-          <span className="text-sm text-gray">{details.age}</span>
+          <span className="text-sm text-gray">{details.birthDate}</span>
         </h1>
         <h4 className="text-md">{details.education}</h4>
 	
